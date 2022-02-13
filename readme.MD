@@ -18,7 +18,7 @@
     w zależności od tego czy imię jest męskie czy nie.
 
 <!-- Unordered List -->
-    Stworzone 2 Klasy : Zoo i Animal
+    Stworzone 2 klasy : Zoo i Animal
     Animal 
         * pola prywatne name, yearOfBirth, type (enum - REPTILE, AMPHIBIAN)
         * publiczne metody dostępe
@@ -52,3 +52,15 @@ _W konstruktorach Zoo i Animal nie są ustawione wartości domyślne, są tylko 
     * interface Speakable z metoda sound() i domyślnym dźwiękiem w klasie Animal
     * nadpisanie w klasach dziedziczących
     * zwierzęra na liście List<Speakable> animals wraz z iteracją.
+
+<!-- Unordered List -->
+    Lambdy
+    * Klasa Numbers wraz z obiektem [-1,2,50,100]
+    * interfejsy dodawania, średniej i wyświetlania liczb większych od 2 
+    * lambdy do metod wraz z wywołaniem bez java stream i z ich wykorzystaniem
+
+<!-- Unordered List -->
+    Zapisywanie do pliku
+    * metoda statyczna void convertAnimalsToTxt(Zoo zoo) 
+    * otwieranie pliku z obsługa wyjątku FileNotFoundException
+    * zapisanie do pliku nazwy zwierzaków w zoo.

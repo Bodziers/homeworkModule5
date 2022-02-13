@@ -34,7 +34,7 @@ public class Fish extends Animal{
 
     @Override
     public String toString() {
-        return "Snake{" +
+        return "Fish{" +
                 "name='" + super.getName()  + '\'' +
                 ", yearOfBirth=" + super.getYearOfBirth() +
                 ", type=" + super.getType() +
