@@ -14,8 +14,8 @@ public class Animal implements Speakable{
         this.type = type;
     }
 
-    public int ageOfAnimal(Animal animal) {
-        return CURRENT_YEAR - animal.getYearOfBirth();
+    public int ageOfAnimal() {
+        return CURRENT_YEAR - getYearOfBirth();
     }
 
     public String getName() {

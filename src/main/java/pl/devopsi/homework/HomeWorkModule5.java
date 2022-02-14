@@ -77,7 +77,7 @@ public class HomeWorkModule5 {
         System.out.println(dragonAnimal.getName() + " urodzony w " + dragonAnimal.getYearOfBirth());
         System.out.println(dragonAnimal.getName() + " rodzina " + dragonAnimal.getType());
         System.out.print(dragonAnimal.getName() + " ma ");
-        System.out.print(dragonAnimal.ageOfAnimal(dragonAnimal));
+        System.out.print(dragonAnimal.ageOfAnimal());
         System.out.println(" lat");
 
         //creating zoo with animals
@@ -161,13 +161,10 @@ public class HomeWorkModule5 {
     }
     public static GenderType gender(String name) {
         char lastChar = name.toLowerCase(Locale.ROOT).charAt(name.length()-1);
-        GenderType genderEnum;
         if (lastChar == 'a') {
-            genderEnum = GenderType.WOMEN;
-        } else {
-            genderEnum = GenderType.MEN;
+            return GenderType.WOMEN;
         }
-        return genderEnum;
+        return GenderType.MEN;
     }
     public static void convertAnimalsToTxt(Zoo zoo) {
         String pathToAnimalsFile = "src/main/resources/animals.txt";

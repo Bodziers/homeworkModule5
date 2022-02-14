@@ -1,8 +1,8 @@
 package pl.devopsi.homework.creature;
 
 public class Fish extends Animal{
-    Boolean saltWater;
-    Boolean sweetWater;
+    private Boolean saltWater;
+    private Boolean sweetWater;
 
     public Fish(String name, int yearOfBirth, Type type, Boolean saltWater, Boolean sweetWater) {
         super(name, yearOfBirth, type);

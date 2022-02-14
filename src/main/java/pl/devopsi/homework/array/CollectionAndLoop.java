@@ -32,6 +32,9 @@ public class CollectionAndLoop {
     }
 
     public double averageOfArray(int[] array) {
+        if (sumOfArrayWithWhile(array)==0) {
+            return 0;
+        }
         return sumOfArrayWithWhile(array) / array.length;
     }
 

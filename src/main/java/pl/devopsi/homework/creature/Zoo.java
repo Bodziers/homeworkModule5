@@ -27,12 +27,10 @@ public class Zoo {
 
     private int avgAge() {
         int ageSum = 0;
-        int avgAgeOfAnimals = 0;
         for (Animal animal : this.animals) {
-            ageSum = ageSum + animal.ageOfAnimal(animal);
+            ageSum = ageSum + animal.ageOfAnimal();
         }
-        avgAgeOfAnimals = ageSum/this.countAnimals();
-        return avgAgeOfAnimals;
+        return ageSum/this.countAnimals();
     }
 
     public List<Animal> getAnimals() {

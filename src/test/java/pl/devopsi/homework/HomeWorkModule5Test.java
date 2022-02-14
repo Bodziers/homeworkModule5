@@ -34,18 +34,20 @@ class HomeWorkModule5Test {
     @Description("Should check name for gender")
     void genderNameWithEnumShouldBeMenTest() {
         //given
+        String name = "Wawrzyn";
         //when
-         String name = "Wawrzyn";
+        GenderType result = HomeWorkModule5.gender(name);
         //then
-        assertEquals(GenderType.MEN,HomeWorkModule5.gender(name));
+        assertEquals(GenderType.MEN,result);
     }
     @Test
     @Description("Should check name for gender")
     void genderNameWithEnumShouldBeWomenTest() {
         //given
-        //when
         String name = "Angelika";
+        //when
+        GenderType result = HomeWorkModule5.gender(name);
         //then
-        assertEquals(GenderType.WOMEN,HomeWorkModule5.gender(name));
+        assertEquals(GenderType.WOMEN,result);
     }
 }

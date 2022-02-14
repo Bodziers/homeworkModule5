@@ -1,7 +1,7 @@
 package pl.devopsi.homework.creature;
 
 public class Dog extends Animal {
-    String breed;
+    private String breed;
 
     public Dog(String name, int yearOfBirth, Type type, String breed) {
         super(name, yearOfBirth, type);
