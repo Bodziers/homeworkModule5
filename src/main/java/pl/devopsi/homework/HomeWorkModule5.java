@@ -174,7 +174,7 @@ public class HomeWorkModule5 {
         try {
             PrintWriter printWriter = new PrintWriter(pathToAnimalsFile);
             zoo.getAnimals().forEach(animal -> printWriter.println(animal.getName()));
-            System.out.println("Zapisano listę zwierząt z zoo do pliku");
+            System.out.println("Animals list was write to file src/main/resources/animals.txt");
             printWriter.close();
         } catch (FileNotFoundException e) {
             System.err.println("File does not exist, creating animals.txt ");
