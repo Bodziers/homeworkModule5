@@ -168,17 +168,25 @@ public class HomeWorkModule5 {
     }
     public static void convertAnimalsToTxt(Zoo zoo) {
         String pathToAnimalsFile = "src/main/resources/animals.txt";
-        try {
-            PrintWriter printWriter = new PrintWriter(pathToAnimalsFile);
-            zoo.getAnimals().forEach(animal -> printWriter.println(animal.getName()));
-            System.out.println("Animals list was write to file src/main/resources/animals.txt");
-            printWriter.close();
-        } catch (FileNotFoundException e) {
-            System.err.println("File does not exist, creating animals.txt ");
-            new File(pathToAnimalsFile);
-        } catch (IOException e) {
-            System.err.println("File exists, but there was IOException");
+        FileOutputStream fileOutputStream;
+        int maxTries = 3;
+        for (int i = 0; i < maxTries;i++) {
+            try {
+                fileOutputStream = new FileOutputStream(pathToAnimalsFile, true);
+                PrintWriter printWriter = new PrintWriter(fileOutputStream);
+                zoo.getAnimals().forEach(animal -> printWriter.println(animal.getName()));
+                System.out.println("Animals list was write to file src/main/resources/animals.txt");
+                printWriter.close();
+                i = maxTries;
+            } catch (FileNotFoundException e) {
+                System.out.println(e.getMessage());
+                new File(pathToAnimalsFile);
+                i++;
+                System.out.println(i + " attempt to create and write information to " + pathToAnimalsFile);
+                if (i==maxTries) {
+                    System.out.println("Creating file " + pathToAnimalsFile + " failed.");
+                }
+            }
         }
-
     }
 }

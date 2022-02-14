@@ -4,7 +4,6 @@ import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pl.devopsi.homework.gender.GenderType;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class HomeWorkModule5Test {
@@ -50,4 +49,6 @@ class HomeWorkModule5Test {
         //then
         assertEquals(GenderType.WOMEN,result);
     }
+
+
 }
